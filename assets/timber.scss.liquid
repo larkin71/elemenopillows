@@ -2270,16 +2270,22 @@ $shareBorderColor: #ececec;
   right: 0;
   background-color: $colorNav;
 
+
   a {
     color: $colorNavText;
+    border-bottom: thick solid $colorNav;
 
     &:active,
-    &:focus {
-      opacity: 0.9;
+    &:focus,
+    &:hover {
+      border-bottom: thick solid white;
     }
   }
 }
-
+.site-nav--active
+  a {
+  border-bottom: thick solid white;
+}
 .site-nav {
   margin: 0;
   font: {
