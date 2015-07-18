@@ -46,6 +46,7 @@
   #Demo Styles - for empty store state
   #FlexSlider
   #Product Reviews
+  #Custom Additions
 ==============================================================================*/
 
 /*============================================================================
@@ -110,6 +111,8 @@ $headerButtonAndSearch: {{ settings.color_header_cart_search }};
 // Nav background
 $colorNav: {{ settings.color_nav_bg }};
 $colorNavText: {{ settings.color_nav_text }};
+$flashbarColor: {{ settings.flash_bar_color }};
+$flashbarText: {{ settings.flash_bar_text }};
 
 // Mobile Nav Bar
 $mobileNavBarHeight: 50px;
@@ -748,7 +751,7 @@ body {
 
 .main-content {
   display: block;
-  padding-top: $gutter;
+  {% if settings.flash_bar_enable == false %}padding-top: $gutter;{% endif %}
   padding-bottom: $gutter*2;
 }
 
@@ -2274,18 +2277,18 @@ $shareBorderColor: #ececec;
 
   a {
     color: $colorNavText;
-    border-bottom: thick solid $colorNav;
+    border-bottom: 3px solid $colorNav;
 
     &:active,
     &:focus,
     &:hover {
-      border-bottom: thick solid white;
+      border-bottom: 3px solid white;
     }
   }
 }
 .site-nav--active
   a {
-  border-bottom: thick solid white;
+  border-bottom: 3px solid white;
 }
 .site-nav {
   margin: 0;
@@ -2750,7 +2753,7 @@ a.product-grid-item,
   position: relative;
   display: block;
   padding: $gutter/2 0;
-  border: 1px solid $colorBorder;
+  #border: 1px solid $colorBorder;
   margin-bottom: $gutter;
 
   &:after {
@@ -2760,7 +2763,7 @@ a.product-grid-item,
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.02);
+    #background-color: rgba(0,0,0,.02);
     z-index: 5;
   }
 
@@ -3563,3 +3566,17 @@ html[xmlns] .slides { display: block; }
   }
 }
 
+
+
+/*============================================================================
+  #Custom Additions by Jake Larkin (jakelarkin.com)
+
+==============================================================================*/
+.flashbar{
+  height: 30px;
+  text-align: center;
+  font-size: {{ settings.flash_bar_size }};
+  color: $flashbarText;
+  background-color: $flashbarColor;
+  margin-bottom: 30px;
+}

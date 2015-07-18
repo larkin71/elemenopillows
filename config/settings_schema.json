@@ -885,6 +885,77 @@
     "settings": [
       {
         "type": "header",
+        "content": "Flash Bar"
+      },
+      {
+        "type": "paragraph",
+        "content": "A small informational bar just below the navigation bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "flash_bar_enable",
+        "label": "Enable Flash Bar"
+      },
+      {
+        "type": "color",
+        "id": "flash_bar_color",
+        "label": "Flash Bar Background Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "flash_bar_text",
+        "label": "Flash Bar Text Color",
+        "default": "#000"
+      },
+      {
+        "type": "select",
+        "id": "flash_bar_size",
+        "label": "Base body text size",
+        "options": [
+          {
+            "value": "12px",
+            "label": "12px"
+          },
+          {
+            "value": "13px",
+            "label": "13px"
+          },
+          {
+            "value": "14px",
+            "label": "14px"
+          },
+          {
+            "value": "15px",
+            "label": "15px"
+          },
+          {
+            "value": "16px",
+            "label": "16px"
+          },
+          {
+            "value": "17px",
+            "label": "17px"
+          },
+          {
+            "value": "18px",
+            "label": "18px"
+          },
+          {
+            "value": "19px",
+            "label": "19px"
+          }
+
+        ],
+        "info": "Headings change proportionally based on body text size."
+      },
+      {
+        "type": "text",
+        "id": "flash_bar_content",
+        "label": "Content of Flash Bar"
+      },
+      {
+        "type": "header",
         "content": "Slideshow"
       },
       {
